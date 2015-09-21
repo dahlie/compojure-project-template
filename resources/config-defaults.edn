@@ -1,0 +1,16 @@
+{:http {:port 3000}
+
+ :db {; https://github.com/tomekw/hikari-cp#usage
+      :adapter "postgresql"
+      :server-name "localhost"
+      :port-number 5432
+      :database-name "dabase"
+      :username "user"
+      :password "password"}
+
+ ;; Timbre logging configuration.
+ ;; If logfile is not given (or nil) then println appender is used.
+ ;; Note: you change the logging level in REPL:
+ ;; (taoensso.timbre/set-level! :trace)
+ :timbre {:level :debug}
+ }
