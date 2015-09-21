@@ -24,7 +24,6 @@
                  [ring/ring-defaults "0.1.5"]
                  [com.stuartsierra/component "0.3.0"]
                  [aprint "0.1.3"] ; for printing out env confing
-                 [org.clojure/data.zip "0.1.1"]
 
                  ;; Logging
                  [ch.qos.logback/logback-classic "1.1.3"]
