@@ -10,8 +10,7 @@
 (defmethod compojure.api.meta/restructure-param :context
   [_ sym acc]
   (update-in acc [:lets] into [sym `{:db            (-> ~'+compojure-api-request+ h/get-components :db :db)
-                                     :env           (-> ~'+compojure-api-request+ h/get-components :env)
-                                     :session       (delay ((-> ~'+compojure-api-request+ h/get-components :tweb :session)))}]))
+                                     :env           (-> ~'+compojure-api-request+ h/get-components :env)}]))
 
 (defn system->context [system & [user]]
   {:db (get-in system [:db :db])
